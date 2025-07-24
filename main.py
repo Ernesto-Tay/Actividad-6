@@ -69,9 +69,33 @@ while True:
             print(f"La cantidad de valores negativos es: {first_negative}")
 
         case "2":
-            pass
+            while True:
+                try:
+                    base = int(input("Ingrese la medida de la base del triángulo: "))
+                    height = int(input("Ingrese la altura del triángulo: "))
+                    if base<0 or height<0:
+                        print("\nSolo ingrese valores positivos")
+                    else:
+                        break
+                except:
+                    print("\nIngrese números enteros")
+
+            print("El área del triángulo es: " + area_triangle(base, height))
+
         case "3":
-            pass
+            while True:
+                try:
+                    val = int(input("Ingrese un número: "))
+                    break
+                except:
+                    print("\nIngrese números enteros")
+
+            confirm = even(val)
+            if confirm:
+                print("El número es par")
+            else:
+                print("El número es impar")
+
         case "4":
             pass
         case "5":
