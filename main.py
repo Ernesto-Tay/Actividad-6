@@ -40,7 +40,34 @@ while True:
     option = input("Seleccione una opción: ")
     match option:
         case "1":
-            pass
+            array_1 = []
+            while True:
+                try:
+                    length_array = int(input("¿Cuántos números va a ingresar?: "))
+                    if length_array <= 0:
+                        print("Debe ser un número positivo")
+                    else:
+                        break
+                except:
+                    print("Ingrese un número entero")
+
+            for i in length_array:
+                while True:
+                    try:
+                        val = int(input(f"Ingrese el valor {i}: "))
+                        array_1.append(val)
+                        break
+                    except:
+                        print("Debe ingresar un número entero")
+
+            first_sum = total_sum(array_1)
+            first_avg = total_avg(array_1)
+            first_positive, first_negative = positive_negative(array_1)
+            print(f"La suma de los valores es: {first_sum}")
+            print(f"El promedio de los valores es: {first_avg}")
+            print(f"La cantidad de valores positivos es: {first_positive}")
+            print(f"La cantidad de valores negativos es: {first_negative}")
+
         case "2":
             pass
         case "3":
