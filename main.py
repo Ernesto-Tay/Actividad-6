@@ -115,14 +115,14 @@ while True:
                 while True:
                     try:
                         nota = int(input(f"Ingrese la nota {i+1}: "))
-                        if nota > 0 and nota < 100:
+                        if nota > 0 and nota <= 100:
                             array_2.append(nota)
                             break
                         else:
                             print("\nLa nota debe ser positiva y no mayor a 100")
                     except:
                         print("Ingrese un número entero")
-                print("El promedio de todas las notas es de: " + total_avg(array_2))
+            print("El promedio de todas las notas es de: " + total_avg(array_2))
 
 
         case "5":
@@ -141,6 +141,7 @@ while True:
                 while True:
                     try:
                         num = int(input(f"\nIngrese el valor {i+1}: "))
+                        array_3.append(num)
                         break
                     except:
                         print("Debe ser un número entero")
