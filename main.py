@@ -103,7 +103,7 @@ while True:
             array_2 = []
             while True:
                 try:
-                    length_array2 = int(input("¿Cuántas notas va a ingresar?: "))
+                    length_array2 = int(input("\n¿Cuántas notas va a ingresar?: "))
                     if length_array2 <= 0:
                         print("Debe ser un número positivo")
                     else:
@@ -119,14 +119,36 @@ while True:
                             array_2.append(nota)
                             break
                         else:
-                            print("La nota debe ser positiva y no mayor a 100")
+                            print("\nLa nota debe ser positiva y no mayor a 100")
                     except:
                         print("Ingrese un número entero")
                 print("El promedio de todas las notas es de: " + total_avg(array_2))
 
 
         case "5":
-            pass
+            array_3 = []
+            while True:
+                try:
+                    length_array3 = int(input("\n¿Cuántos valores va a ingresar?: "))
+                    if length_array3 <= 0:
+                        print("El valor debe ser positivo")
+                    else:
+                        break
+                except:
+                    print("El valor debe ser un número entero")
+
+            for i in range (length_array3):
+                while True:
+                    try:
+                        num = int(input(f"\nIngrese el valor {i+1}: "))
+                        break
+                    except:
+                        print("Debe ser un número entero")
+
+            max_val, min_val = max_min(array_3)
+            print(f"El valor máximo es de: {max_val}\nEl valor mínimo es de : {min_val}")
+
+
         case "6":
             print("Saliendo...")
             break
