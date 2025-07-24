@@ -51,10 +51,10 @@ while True:
                 except:
                     print("Ingrese un número entero")
 
-            for i in length_array:
+            for i in range(length_array):
                 while True:
                     try:
-                        val = int(input(f"Ingrese el valor {i}: "))
+                        val = int(input(f"Ingrese el valor {i+1}: "))
                         array_1.append(val)
                         break
                     except:
@@ -67,6 +67,7 @@ while True:
             print(f"El promedio de los valores es: {first_avg}")
             print(f"La cantidad de valores positivos es: {first_positive}")
             print(f"La cantidad de valores negativos es: {first_negative}")
+
 
         case "2":
             while True:
@@ -82,6 +83,7 @@ while True:
 
             print("El área del triángulo es: " + area_triangle(base, height))
 
+
         case "3":
             while True:
                 try:
@@ -96,8 +98,33 @@ while True:
             else:
                 print("El número es impar")
 
+
         case "4":
-            pass
+            array_2 = []
+            while True:
+                try:
+                    length_array2 = int(input("¿Cuántas notas va a ingresar?: "))
+                    if length_array2 <= 0:
+                        print("Debe ser un número positivo")
+                    else:
+                        break
+                except:
+                    print("Ingrese un número entero")
+
+            for i in range(length_array2):
+                while True:
+                    try:
+                        nota = int(input(f"Ingrese la nota {i+1}: "))
+                        if nota > 0 and nota < 100:
+                            array_2.append(nota)
+                            break
+                        else:
+                            print("La nota debe ser positiva y no mayor a 100")
+                    except:
+                        print("Ingrese un número entero")
+                print("El promedio de todas las notas es de: " + total_avg(array_2))
+
+
         case "5":
             pass
         case "6":
